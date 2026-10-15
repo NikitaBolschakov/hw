@@ -36,7 +36,10 @@ body {
   max-height: 200px;
   min-height: 32px;
   margin-top: 4px;
+}
 
+.textarea::placeholder {
+  font-family: "Montserrat", sans-serif;
 }
 
 .label {
