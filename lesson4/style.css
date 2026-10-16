@@ -39,7 +39,7 @@ body {
 }
 
 .textarea::placeholder {
-  font-family: "Montserrat", sans-serif;
+font-family: "Montserrat", sans-serif;
 }
 
 .label {
