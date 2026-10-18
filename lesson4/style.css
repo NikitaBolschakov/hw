@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -8,47 +12,62 @@ body {
 }
 
 .form {
-  width: 230px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
   border: 2px solid rgb(32, 32, 32);
   border-radius: 6px;
 }
 
 .title {
-  font-weight: 600;
-  font-size: 16px;
-  margin: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 20px 0;
 }
 
 .input {
   margin: 4px 0;
-  width: 196px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding-left: 10px;
+}
+
+.input::placeholder {
+  font-size: 13px;
 }
 
 .fieldset {
   border: none;
-  padding-top: 0;
-  padding-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .textarea {
+  padding-left: 10px;
   resize: vertical;
-  width: 196px;
+  width: 100%;
   max-height: 200px;
   min-height: 32px;
   margin-top: 4px;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 
 .textarea::placeholder {
-font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
 }
 
 .label {
-  display: block;
-  margin-bottom: 12px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 12px
 }
 
 .checkbox-label {
-  display: flex;
+  padding-left: 28px;
+
 }
 
 .text {
@@ -62,24 +81,57 @@ font-family: "Montserrat", sans-serif;
 }
 
 .checkbox {
-  margin: 0;
-  accent-color: #DAF765;
+  appearance: none;
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+}
+
+.checkbox::after {
+  content: "";
+  position: absolute;
+  margin-left: -28px;
   width: 16px;
   height: 16px;
+  border: 1px solid black;
+  border-radius: 4px;
   cursor: pointer;
-  margin-right: 4px;
+}
+
+.checkbox:checked::after {
+  background: url("./images/check-icon.svg") no-repeat center, rgb(62, 62, 62);
 }
 
 .button {
-  margin-bottom: 16px;
-  margin-left: 12px;
+  margin: 16px 0 0;
+  padding: 6px 18px;
+  border: none;
+  border-radius: 4px;
+  background-color: #DAF765;
+  transition: opacity .2s;
+  font-weight: 500;
 }
 
 .button:hover {
-  background-color: #DAF765;
-  border-width: 2px;
+  opacity: 0.8;
   cursor: pointer;
-  border-radius: 2px;
-  border-color: #89984b;
 }
 
+.button:not(:disabled):active {
+  background-color: #a9c04f;
+}
+
+.button:disabled,
+.input:disabled,
+.textarea:disabled,
+.checkbox::after:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.input:focus-visible,
+.textarea:focus-visible,
+.button:focus-visible,
+.checkbox:focus-visible::after {
+  outline: 2px solid #c7e25d;
+}
