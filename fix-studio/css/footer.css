@@ -1,6 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.5.15,
+* Autoprefixer: v10.5.0
+* Browsers: last 4 version
+*/
+
 .footer {
   margin-top: auto;
   padding: 60px 0 40px;
+  background: -webkit-gradient(linear,
+      left top, right top,
+      from(rgba(73, 169, 255, 0.2)),
+      to(rgba(252, 124, 217, 0.2)));
   background: linear-gradient(90deg,
       rgba(73, 169, 255, 0.2) 0%,
       rgba(252, 124, 217, 0.2) 100%);
@@ -19,9 +30,15 @@
 }
 
 .footer-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 60px;
   list-style: none;
   margin: 0;
@@ -33,6 +50,7 @@
   font-size: 16px;
   line-height: 130%;
   color: #535755;
+  -webkit-transition: color .2s;
   transition: color .2s;
 }
 
@@ -45,4 +63,14 @@
   font-size: 14px;
   letter-spacing: .04em;
   color: #858e8a;
+}
+
+@media (width <= 768px) {
+  .footer-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 25px;
+  }
 }
