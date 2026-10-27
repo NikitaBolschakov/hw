@@ -197,6 +197,10 @@
 }
 
 @media (width <=1440px) {
+.hero__info-text {
+  margin-bottom: 200px;
+}
+
   .hero__img {
     width: 50%;
   }
