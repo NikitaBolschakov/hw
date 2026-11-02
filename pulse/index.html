@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head class="page">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Pulse Fitness Center</title>
+  </head>
+  <body class="page__body">
+    <header class="header header--fixed">
+      <div class="container header__container">
+        <a href="#" class="logo header__logo">
+          <img
+            class="logo__img"
+            src="./icons/logo-header.svg"
+            width="198"
+            height="38"
+            alt="Логотип Pulse Fitness Center"
+          />
+        </a>
+        <nav
+          class="menu header__menu"
+          id="header__menu"
+          aria-label="Главное меню"
+        >
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#home" class="menu__link">Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#catalogs" class="menu__link">Catalogs</a>
+            </li>
+            <li class="menu__item">
+              <a href="#blog" class="menu__link">Blog</a>
+            </li>
+            <li class="menu__item">
+              <a href="#collections" class="menu__link">Collections</a>
+            </li>
+            <li class="menu__item">
+              <a href="#contact" class="menu__link">Contact&nbsp;us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button
+            class="header__actions-button"
+            title="Корзина"
+            aria-label="Корзина"
+          >
+            <img
+              src="./icons/basket-icon.svg"
+              width="34"
+              height="33"
+              alt="Иконка корзины"
+            />
+          </button>
+          <button
+            class="header__actions-button"
+            title="Поиск"
+            aria-label="Поиск"
+          >
+            <img
+              src="./icons/search-icon.svg"
+              width="28"
+              height="28"
+              alt="Иконка поиска"
+            />
+          </button>
+          <button class="header__burger burger">
+            <svg width="25" height="22">
+              <use
+                class="burger__icon-menu"
+                href="./icons/sprite.svg#burger-menu"
+                title="Открыть меню"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                aria-controls="header__menu"
+              ></use>
+              <!-- <use
+                class="burger__icon-cross"
+                href="./icons/sprite.svg#menu-cross"
+                title="Закрыть меню"
+                aria-label="Закрыть меню"
+              ></use> -->
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
